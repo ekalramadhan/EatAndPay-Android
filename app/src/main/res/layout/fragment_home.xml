@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:gravity="center"
-            android:text="Eat and Play Ekal YEYEY"
+            android:text="Eat and Pay Ekal YEYEY"
             android:textColor="#ffff"
             android:drawablePadding="6dp"/>
 

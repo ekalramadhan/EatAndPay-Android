@@ -1,26 +1,32 @@
 package com.example.android.eatandpay;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity  {
     private ImageButton icBengbeng, icGoodtime, icNextar, icPilus, icRicheese, icShorr, icTehPucuk, icUltramilk, icVit;
-
+    Dialog popupwind;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        popupwind = new Dialog(this);
 
         icBengbeng = findViewById(R.id.bengbeng);
         icBengbeng.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, BuyBengBeng.class));
+                //startActivity(new Intent(MainActivity.this, BuyBengBeng.class));
+                buyBengbeng(v);
             }
         });
 
@@ -28,7 +34,7 @@ public class MainActivity extends AppCompatActivity  {
         icGoodtime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                buyFood();
+                buyGoodtime(v);
             }
         });
 
@@ -36,64 +42,63 @@ public class MainActivity extends AppCompatActivity  {
         icShorr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                buyFood();
+                buyShorr(v);
             }
         });
 
-        icNextar = findViewById(R.id.nextar);
-        icNextar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                buyFood();
-            }
-        });
-
-        icPilus = findViewById(R.id.pilus);
-        icPilus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                buyFood();
-            }
-        });
-
-        icRicheese = findViewById(R.id.richeese);
-        icRicheese.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                buyFood();
-            }
-        });
-
-        icVit = findViewById(R.id.vit);
-        icVit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                buyFood();
-            }
-        });
-
-        icTehPucuk = findViewById(R.id.tehpucuk);
-        icTehPucuk.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                buyFood();
-            }
-        });
-
-        icUltramilk = findViewById(R.id.ultramilk);
-        icUltramilk.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                buyFood();
-            }
-        });
     }
 
     // buyFood method
-    public void buyFood()
+    public void buyBengbeng(View view)
     {
-        Log.i("info", "makanan diklik");
+        Log.i("info", "bengbeng diklik");
+        Button done;
+
+        popupwind.setContentView(R.layout.buybengbeng);
+        done = popupwind.findViewById(R.id.ok);
+        done.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popupwind.dismiss();
+            }
+        });
+        popupwind.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        popupwind.show();
     }
+
+    public void buyGoodtime(View view)
+    {
+        Button done;
+
+        popupwind.setContentView(R.layout.buygoodtime);
+        done = popupwind.findViewById(R.id.ok);
+        done.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popupwind.dismiss();
+            }
+        });
+        popupwind.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        popupwind.show();
+    }
+
+    public void buyShorr(View view)
+    {
+        Log.i("info", "bengbeng diklik");
+        Button done;
+
+        popupwind.setContentView(R.layout.buyshorr);
+        done = popupwind.findViewById(R.id.ok);
+        done.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popupwind.dismiss();
+            }
+        });
+        popupwind.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        popupwind.show();
+    }
+
 
     @Override
     public void onStart() {
