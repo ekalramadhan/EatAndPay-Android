@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "246821057504",
+    "firebase_url": "https://eatandpay-android.firebaseio.com",
+    "project_id": "eatandpay-android",
+    "storage_bucket": "eatandpay-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:246821057504:android:1577dd6157d78783",
+        "android_client_info": {
+          "package_name": "com.example.android.eatandpay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "246821057504-vdk5ovi13vcjg4t4qjjdtvv3lqjlbiei.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.eatandpay",
+            "certificate_hash": "282aebbe30dec6dcc4423a9034ebb492142185a1"
+          }
+        },
+        {
+          "client_id": "246821057504-hpqtd22fbo4r84usj91kmoa0c4fip3os.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHh385C7-lHZr_3hx6x3su5bUmkz2mIoI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "246821057504-hpqtd22fbo4r84usj91kmoa0c4fip3os.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
