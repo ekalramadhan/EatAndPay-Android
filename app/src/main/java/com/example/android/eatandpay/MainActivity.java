@@ -11,9 +11,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+
 public class MainActivity extends AppCompatActivity  {
     private ImageButton icBengbeng, icGoodtime, icNextar, icPilus, icRicheese, icShorr, icTehPucuk, icUltramilk, icVit;
     Dialog popupwind;
+    private static final String TAG = "MainActivity";
+    private Button Orderan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +36,10 @@ public class MainActivity extends AppCompatActivity  {
             public void onClick(View v) {
                 //startActivity(new Intent(MainActivity.this, BuyBengBeng.class));
                 buyBengbeng(v);
+
             }
         });
+
 
         icGoodtime = findViewById(R.id.goodtime);
         icGoodtime.setOnClickListener(new View.OnClickListener() {
@@ -91,6 +102,14 @@ public class MainActivity extends AppCompatActivity  {
             @Override
             public void onClick(View v) {
                 buyVit(v);
+            }
+        });
+
+        Orderan = findViewById(R.id.orderbutton);
+        Orderan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                orderDetails(v);
             }
         });
     }
@@ -247,6 +266,48 @@ public class MainActivity extends AppCompatActivity  {
         popupwind.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         popupwind.show();
     }
+
+    public void orderDetails(View view)
+    {
+        Log.i("info", "bengbeng diklik");
+        Button done;
+
+        popupwind.setContentView(R.layout.listorder);
+        done = popupwind.findViewById(R.id.submit);
+        done.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popupwind.dismiss();
+            }
+        });
+        popupwind.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        popupwind.show();
+    }
+
+    //Write Database
+    public void writeToDatabase() {
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("message");
+        myRef.setValue("Hello, World!");
+
+        // Read from the database
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                String value = dataSnapshot.getValue(String.class);
+                Log.d(TAG, "Value is: " + value);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
+    }
+
     @Override
     public void onStart() {
         super.onStart();
