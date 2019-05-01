@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="200dp"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
     android:gravity="center"
@@ -19,15 +19,25 @@
         android:contentDescription="@null"
         android:src="@mipmap/ic_bengbeng" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:background="@color/white"
+        android:text=" Beng-Beng
+   Rp 2.500 " />
+
+
     <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
         android:id="@+id/myButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:paddingTop="25dp"
         app:backGroundColor="@color/white"
-        app:textColor="@color/enak"
-        android:layout_gravity="center_horizontal"
-        />
+        app:textColor="@color/enak" />
 
     <Button
         android:id="@+id/ok"

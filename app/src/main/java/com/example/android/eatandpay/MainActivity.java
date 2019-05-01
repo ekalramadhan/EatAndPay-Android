@@ -38,19 +38,17 @@ public class MainActivity extends AppCompatActivity  {
         icBengbeng.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //startActivity(new Intent(MainActivity.this, BuyBengBeng.class));
-                buyBengbeng(v);
+                startActivity(new Intent(MainActivity.this, BuyBengBeng.class));
                 //writeToDatabase();
 
             }
         });
 
-
         icGoodtime = findViewById(R.id.goodtime);
         icGoodtime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                buyGoodtime(v);
+                startActivity(new Intent(MainActivity.this, BuyGoodTime.class));
             }
         });
 
@@ -58,7 +56,7 @@ public class MainActivity extends AppCompatActivity  {
         icShorr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                buyShorr(v);
+                startActivity(new Intent(MainActivity.this, BuyShorr.class));
             }
         });
 
@@ -66,7 +64,7 @@ public class MainActivity extends AppCompatActivity  {
         icNextar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                buyNextar(v);
+                startActivity(new Intent(MainActivity.this, BuyNextar.class));
             }
         });
 
@@ -74,7 +72,7 @@ public class MainActivity extends AppCompatActivity  {
         icPilus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                buyPilus(v);
+                startActivity(new Intent(MainActivity.this, BuyPilus.class));
             }
         });
 
@@ -82,7 +80,7 @@ public class MainActivity extends AppCompatActivity  {
         icRicheese.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                buyRicheese(v);
+                startActivity(new Intent(MainActivity.this, BuyRicheese.class));
             }
         });
 
@@ -90,7 +88,7 @@ public class MainActivity extends AppCompatActivity  {
         icTehPucuk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                buyTehpucuk(v);
+                startActivity(new Intent(MainActivity.this, BuyTehPucuk.class));
             }
         });
 
@@ -98,7 +96,7 @@ public class MainActivity extends AppCompatActivity  {
         icUltramilk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                buyUltramilk(v);
+                startActivity(new Intent(MainActivity.this, BuyUltramilk.class));
             }
         });
 
@@ -106,7 +104,7 @@ public class MainActivity extends AppCompatActivity  {
         icVit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                buyVit(v);
+                startActivity(new Intent(MainActivity.this, BuyVit.class));
             }
         });
 
@@ -115,62 +113,14 @@ public class MainActivity extends AppCompatActivity  {
             @Override
             public void onClick(View v) {
                 orderDetails(v);
+                //startActivity(new Intent(MainActivity.this, ListOrder.class));
             }
         });
     }
 
-    // buyFood method
-    public void buyBengbeng(View view)
-    {
-        Log.i("info", "bengbeng diklik");
-        Button done;
 
-        popupwind.setContentView(R.layout.buybengbeng);
-        done = popupwind.findViewById(R.id.ok);
-        done.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                popupwind.dismiss();
-            }
-        });
-        popupwind.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        popupwind.show();
-    }
 
-    public void buyGoodtime(View view)
-    {
-        Button done;
-
-        popupwind.setContentView(R.layout.buygoodtime);
-        done = popupwind.findViewById(R.id.ok);
-        done.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                popupwind.dismiss();
-            }
-        });
-        popupwind.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        popupwind.show();
-    }
-
-    public void buyShorr(View view)
-    {
-        Log.i("info", "bengbeng diklik");
-        Button done;
-
-        popupwind.setContentView(R.layout.buyshorr);
-        done = popupwind.findViewById(R.id.ok);
-        done.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                popupwind.dismiss();
-            }
-        });
-        popupwind.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        popupwind.show();
-    }
-
-    public void buyNextar(View view)
+    /*public void buyNextar(View view)
     {
         Log.i("info", "bengbeng diklik");
         Button done;
@@ -270,25 +220,14 @@ public class MainActivity extends AppCompatActivity  {
         });
         popupwind.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         popupwind.show();
-    }
+    }*/
 
     public void orderDetails(View view)
     {
-        Log.i("info", "bengbeng diklik");
-        Button done;
-
-        popupwind.setContentView(R.layout.listorder);
-        done = popupwind.findViewById(R.id.submit);
-        done.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                popupwind.dismiss();
-            }
-        });
-        popupwind.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        popupwind.show();
+        Intent intent = new Intent(this, ListOrder.class);
+        startActivity(intent);
     }
-    /*
+    /*\
     //Write Database
     public void writeToDatabase() {
         FirebaseDatabase database = FirebaseDatabase.getInstance();

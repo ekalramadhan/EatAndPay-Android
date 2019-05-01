@@ -18,6 +18,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".BuyBengBeng"></activity>
+        <activity android:name=".BuyShorr"></activity>
+        <activity android:name=".BuyGoodTime"></activity>
+        <activity android:name=".BuyNextar"></activity>
+        <activity android:name=".BuyPilus"></activity>
+        <activity android:name=".BuyRicheese"></activity>
+        <activity android:name=".BuyTehPucuk"></activity>
+        <activity android:name=".BuyUltramilk"></activity>
+        <activity android:name=".BuyVit"></activity>
+        <activity android:name=".ListOrder"></activity>
     </application>
 
 </manifest>

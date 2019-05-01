@@ -13,12 +13,12 @@ import android.widget.ImageView;
 
 import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
 
-public class BuyBengBeng extends Activity {
+public class BuyRicheese extends Activity {
 
     ElegantNumberButton btn;
-    ImageView bengbeng;
+    ImageView richeese;
     Button done;
-    int countBengbeng;
+    int countRicheese;
     String num;
 
     public static final String SHARED_PREFS = "sharedPrefs";
@@ -30,7 +30,7 @@ public class BuyBengBeng extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.buybengbeng);
+        setContentView(R.layout.buyricheese);
 
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
@@ -41,7 +41,7 @@ public class BuyBengBeng extends Activity {
         getWindow().setLayout((int)(width*.8), (int)(height*.6));
 
 
-        bengbeng = (ImageView)findViewById(R.id.beng_beng);
+        richeese = (ImageView)findViewById(R.id.richeese);
 
         btn = (ElegantNumberButton)findViewById(R.id.myButton);
         btn.setOnClickListener(new ElegantNumberButton.OnClickListener() {
@@ -56,9 +56,9 @@ public class BuyBengBeng extends Activity {
         done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sharedPreferences = getSharedPreferences("countbengbeng", Context.MODE_PRIVATE);
+                sharedPreferences = getSharedPreferences("countricheese", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("countbengbeng", num);
+                editor.putString("countricheese", num);
                 editor.apply();
                 finish();
             }

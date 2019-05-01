@@ -2,11 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="200dp"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
     android:gravity="center"
-    android:id="@+id/orderbengbeng"
     android:orientation="vertical"
     android:background="@color/enak"
     tools:context=".BuyBengBeng">
@@ -18,8 +17,234 @@
         android:layout_marginTop="20dp"
         android:text="List Order"
         android:textColor="@color/white"
-        android:textSize="35dp"
+        android:textSize="30dp"
         android:textAlignment="center"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/namabengbeng"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:text="Beng Beng   "
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/count_bengbeng"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_below="@id/namabengbeng"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/namagoodtime"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:text="Good Time   "
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/count_goodtime"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_below="@id/namabengbeng"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/namashorr"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:text="Shorr   "
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/count_shorr"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_below="@id/namashorr"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/namanextar"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:text="Nextar   "
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/count_nextar"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_below="@id/namanextar"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/namapilus"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:text="Pilus "
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/count_pilus"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_below="@id/namapilus"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/namaricheese"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:text="Richeese   "
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/count_richeese"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_below="@id/namaricheese"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/namatehpucuk"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:text="Teh Pucuk   "
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/count_tehpucuk"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_below="@id/namatehpucuk"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/namaultramilk"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:text="Ultramilk   "
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/count_ultramilk"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_below="@id/namaultramilk"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/namavit"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:text="Vit   "
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/count_vit"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_below="@id/namavit"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/totalharga"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/submit"
