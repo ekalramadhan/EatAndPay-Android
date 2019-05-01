@@ -1,5 +1,86 @@
 <resources>
-    <string name="app_name">Bermain Ubur Ubur</string>
+    <string name="app_name">Eat And Pay</string>
+
+    <string name="bengbeng">
+        <br> \n</br>
+        <br>
+        Beng-Beng \n</br>
+        <br>
+        Rp 2.500 \n</br>
+        <br></br>
+    </string>
+
+    <string name="goodtime">
+        <br> \n</br>
+        <br>
+        Goodtime \n</br>
+        <br>
+        Rp 2.000 \n</br>
+        <br></br>
+    </string>
+
+    <string name="nextar">
+        <br> \n</br>
+        <br>
+        Nextar \n</br>
+        <br>
+        Rp 2.500 \n</br>
+        <br></br>
+    </string>
+
+    <string name="shorr">
+        <br> \n</br>
+        <br>
+        Shorr \n</br>
+        <br>
+        Rp 1.500 \n</br>
+        <br></br>
+    </string>
+
+    <string name="pilus">
+        <br> \n</br>
+        <br>
+        Pilus Garuda \n</br>
+        <br>
+        Rp 1.500 \n</br>
+        <br></br>
+    </string>
+
+    <string name="richeese">
+        <br> \n</br>
+        <br>
+        Richeese Ahh \n</br>
+        <br>
+        Rp 1.500 \n</br>
+        <br></br>
+    </string>
+
+    <string name="tehpucuk">
+        <br> \n</br>
+        <br>
+        Teh Pucuk \n</br>
+        <br>
+        Rp 4.000 \n</br>
+        <br></br>
+    </string>
+
+    <string name="ultramilk">
+        <br> \n</br>
+        <br>
+        Ultramilk \n</br>
+        <br>
+        Rp 6.000 \n</br>
+        <br></br>
+    </string>
+
+    <string name="vit">
+        <br> \n</br>
+        <br>
+        Vit \n</br>
+        <br>
+        Rp 2.500 \n</br>
+        <br></br>
+    </string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

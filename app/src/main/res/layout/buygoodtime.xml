@@ -9,7 +9,7 @@
     android:id="@+id/ordergoodtime"
     android:orientation="vertical"
     android:background="@color/enak"
-    tools:context=".BuyBengBeng">
+    tools:context=".BuyGoodTime">
 
     <ImageView
         android:id="@+id/goodtime"
@@ -26,8 +26,8 @@
         android:textStyle="bold"
         android:textSize="20dp"
         android:background="@color/white"
-        android:text=" Goodtime
-   Rp 2.500 " />
+        android:fontFamily="@font/montserrat_regular"
+        android:text="@string/goodtime" />
 
     <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
         android:id="@+id/myButton"
@@ -45,6 +45,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:background="@color/white"
+        android:fontFamily="@font/montserrat_regular"
+        android:textStyle="bold"
         android:text="OK" />
 
 

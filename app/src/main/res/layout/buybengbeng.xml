@@ -23,11 +23,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:textStyle="bold"
         android:textSize="20dp"
         android:background="@color/white"
-        android:text=" Beng-Beng
-   Rp 2.500 " />
+        android:fontFamily="@font/montserrat_regular"
+        android:text="@string/bengbeng" />
 
 
     <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
@@ -45,6 +44,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:background="@color/white"
+        android:fontFamily="@font/montserrat_regular"
+        android:textStyle="bold"
         android:text="OK" />
 
 </LinearLayout>

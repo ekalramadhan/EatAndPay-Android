@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/enak"
-            android:src="@mipmap/ic_logocat"
+            android:src="@mipmap/ic_eatandpay"
             android:layout_gravity="start"/>
 
         <TextView
@@ -28,7 +28,9 @@
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:gravity="center"
-            android:text="Bermain Ubur-Ubur"
+            android:fontFamily="@font/montserrat_regular"
+            android:textStyle="bold"
+            android:text="Eat And Pay"
             android:textColor="#ffff"
             android:drawablePadding="6dp"/>
 
@@ -143,10 +145,12 @@
         android:id="@+id/orderbutton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp"
+        android:padding="25dp"
         android:layout_marginTop="50dp"
         android:textColor="#ffffff"
         android:onClick="orderDetails"
         android:background="@drawable/roundbutton"
+        android:fontFamily="@font/montserrat_regular"
+        android:textStyle="bold"
         android:text="Orderan" />
 </LinearLayout>
