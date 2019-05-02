@@ -25,8 +25,6 @@ public class MainActivity extends AppCompatActivity  {
     Dialog popupwind;
     private static final String TAG = "MainActivity";
     private Button Orderan;
-    private Barang value;
-    private ArrayList<Barang> valuelist;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,10 +114,11 @@ public class MainActivity extends AppCompatActivity  {
                 //startActivity(new Intent(MainActivity.this, ListOrder.class));
             }
         });
+
     }
 
 
-
+//Make transparent background!!
     /*public void buyNextar(View view)
     {
         Log.i("info", "bengbeng diklik");
@@ -227,8 +226,9 @@ public class MainActivity extends AppCompatActivity  {
         Intent intent = new Intent(this, ListOrder.class);
         startActivity(intent);
     }
-    /*\
-    //Write Database
+
+    /*
+    //Write Database Maybe
     public void writeToDatabase() {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("Barang");
@@ -277,4 +277,5 @@ public class MainActivity extends AppCompatActivity  {
         super.onPause();
 
     }
+
 }

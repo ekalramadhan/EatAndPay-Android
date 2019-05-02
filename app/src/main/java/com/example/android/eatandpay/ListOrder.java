@@ -4,20 +4,71 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.List;
+
 public class ListOrder extends AppCompatActivity {
+
+    private Integer jmlsisa = 0;
+    private String value1;
+    private Integer jmlbarang = 0;
+    private Boolean noData = true;
+    public static DatabaseReference databengbeng,datagoodtime,datashorr,datanextar,datapilus,dataricheese,datatehpucuk,dataultramilk,datavit;
+
+    private Button Submit;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.listorder);
 
+        Submit = findViewById(R.id.submit);
+
         SharedPreferences countbengbeng = getSharedPreferences("countbengbeng", Context.MODE_PRIVATE);
-        String value1 = countbengbeng.getString("countbengbeng", "0");
+        value1 = countbengbeng.getString("countbengbeng", "0");
         TextView beliBengbeng = (TextView) findViewById(R.id.count_bengbeng);
         beliBengbeng.setText(value1);
+
+        databengbeng = FirebaseDatabase.getInstance().getReference("/Barang/1");
+        databengbeng.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                jmlbarang = dataSnapshot.child("Jumlah_Sisa").getValue(Integer.class);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+        Submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                jmlsisa = jmlbarang - Integer.parseInt(value1);
+                databengbeng.child("Jumlah_Sisa").setValue(jmlsisa);
+                value1 = "";
+
+                Intent mainactivity = new Intent(ListOrder.this,MainActivity.class);
+                startActivity(mainactivity);
+            }
+        });
+
+
+
 
         SharedPreferences countgoodtime = getSharedPreferences("countgoodtime", Context.MODE_PRIVATE);
         String value2 = countgoodtime.getString("countgoodtime", "0");

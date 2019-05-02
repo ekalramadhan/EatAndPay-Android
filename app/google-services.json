@@ -23,6 +23,22 @@
           }
         },
         {
+          "client_id": "1084426549259-g06efggtbkv31msropu95p3j186hn6vq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.eatandpay",
+            "certificate_hash": "b3361f37fc4f8c8c5521d5a2f8bf57789d857615"
+          }
+        },
+        {
+          "client_id": "1084426549259-9batdvv3buhi0kem650skber9d2mb2t3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.eatandpay",
+            "certificate_hash": "c87da255223502fcaaaf89905b83a4b54afc6ed4"
+          }
+        },
+        {
           "client_id": "1084426549259-slfj0k0ccf387h0sfm3tfks0m762qvil.apps.googleusercontent.com",
           "client_type": 3
         }
