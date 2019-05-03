@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -26,6 +27,8 @@ public class MainActivity extends AppCompatActivity  {
     private static final String TAG = "MainActivity";
     private Button Orderan;
 
+    String myString = "Silahkan Bayar Melalui Kasir, Setelah Menekan Submit Layar Akan Berhenti Selama 15 Detik dan Kasir Akan Kembali Terkunci";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,9 +40,7 @@ public class MainActivity extends AppCompatActivity  {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, BuyBengBeng.class));
-                //writeToDatabase();
-
-            }
+                }
         });
 
         icGoodtime = findViewById(R.id.goodtime);
@@ -111,148 +112,17 @@ public class MainActivity extends AppCompatActivity  {
             @Override
             public void onClick(View v) {
                 orderDetails(v);
+                Toast.makeText(getApplicationContext(),myString,Toast.LENGTH_LONG).show();
                 //startActivity(new Intent(MainActivity.this, ListOrder.class));
             }
         });
-
     }
-
-
-//Make transparent background!!
-    /*public void buyNextar(View view)
-    {
-        Log.i("info", "bengbeng diklik");
-        Button done;
-
-        popupwind.setContentView(R.layout.buynextar);
-        done = popupwind.findViewById(R.id.ok);
-        done.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                popupwind.dismiss();
-            }
-        });
-        popupwind.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        popupwind.show();
-    }
-
-    public void buyPilus(View view)
-    {
-        Log.i("info", "bengbeng diklik");
-        Button done;
-
-        popupwind.setContentView(R.layout.buypilus);
-        done = popupwind.findViewById(R.id.ok);
-        done.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                popupwind.dismiss();
-            }
-        });
-        popupwind.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        popupwind.show();
-    }
-
-    public void buyRicheese(View view)
-    {
-        Log.i("info", "bengbeng diklik");
-        Button done;
-
-        popupwind.setContentView(R.layout.buyricheese);
-        done = popupwind.findViewById(R.id.ok);
-        done.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                popupwind.dismiss();
-            }
-        });
-        popupwind.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        popupwind.show();
-    }
-
-    public void buyTehpucuk(View view)
-    {
-        Log.i("info", "bengbeng diklik");
-        Button done;
-
-        popupwind.setContentView(R.layout.buytehpucuk);
-        done = popupwind.findViewById(R.id.ok);
-        done.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                popupwind.dismiss();
-            }
-        });
-        popupwind.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        popupwind.show();
-    }
-
-    public void buyUltramilk(View view)
-    {
-        Log.i("info", "bengbeng diklik");
-        Button done;
-
-        popupwind.setContentView(R.layout.buyultramilk);
-        done = popupwind.findViewById(R.id.ok);
-        done.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                popupwind.dismiss();
-            }
-        });
-        popupwind.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        popupwind.show();
-    }
-
-    public void buyVit(View view)
-    {
-        Log.i("info", "bengbeng diklik");
-        Button done;
-
-        popupwind.setContentView(R.layout.buyvit);
-        done = popupwind.findViewById(R.id.ok);
-        done.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                popupwind.dismiss();
-            }
-        });
-        popupwind.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        popupwind.show();
-    }*/
 
     public void orderDetails(View view)
     {
         Intent intent = new Intent(this, ListOrder.class);
         startActivity(intent);
     }
-
-    /*
-    //Write Database Maybe
-    public void writeToDatabase() {
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("Barang");
-
-        // Read from the database
-       myRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                for (DataSnapshot getdata : dataSnapshot.getChildren()) {
-                    value = getdata.getValue(Barang.class);
-                    valuelist.add(value);
-                    Log.d(TAG, "Value is: " + valuelist.get(8).getNamaBarang());
-                }
-            }
-
-            @Override
-            public void onCancelled(DatabaseError error) {
-                // Failed to read value
-                Log.w(TAG, "Failed to read value.", error.toException());
-            }
-        });
-    } */
 
     @Override
     public void onStart() {

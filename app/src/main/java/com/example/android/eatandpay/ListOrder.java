@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -32,6 +33,12 @@ public class ListOrder extends AppCompatActivity {
     public static DatabaseReference databengbeng,datagoodtime,datashorr,datanextar,datapilus,dataricheese,datatehpucuk,dataultramilk,datavit, datatransaksi, dataservo;
 
     private Button Submit;
+    String myString = "Terimakasih Sudah Membeli, Kejujuran Anda Sangat Kami Hargai";
+
+    public static final String SHARED_PREFS = "sharedPrefs";
+    public static final String TEXT = "text";
+
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -288,14 +295,70 @@ public class ListOrder extends AppCompatActivity {
                 datatransaksi.child("Uang_Masuk").setValue(uangMasuk);
                 dataservo.child("HIGH").setValue(1);
                 try {
-                    sleep(20000);
+                    sleep(15000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
                 dataservo.child("HIGH").setValue(0);
 
+                sharedPreferences = getSharedPreferences("countbengbeng", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor1 = sharedPreferences.edit();
+                editor1.putString("countbengbeng", "0");
+                editor1.apply();
+                finish();
+
+                sharedPreferences = getSharedPreferences("countgoodtime", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor2 = sharedPreferences.edit();
+                editor2.putString("countgoodtime", "0");
+                editor2.apply();
+                finish();
+
+                sharedPreferences = getSharedPreferences("countshorr", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor3 = sharedPreferences.edit();
+                editor3.putString("countshorr", "0");
+                editor3.apply();
+                finish();
+
+                sharedPreferences = getSharedPreferences("countnextar", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor4 = sharedPreferences.edit();
+                editor4.putString("countnextar", "0");
+                editor4.apply();
+                finish();
+
+                sharedPreferences = getSharedPreferences("countpilus", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor5 = sharedPreferences.edit();
+                editor5.putString("countpilus", "0");
+                editor5.apply();
+                finish();
+
+                sharedPreferences = getSharedPreferences("countricheese", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor6 = sharedPreferences.edit();
+                editor6.putString("countricheese", "0");
+                editor6.apply();
+                finish();
+
+                sharedPreferences = getSharedPreferences("counttehpucuk", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor7 = sharedPreferences.edit();
+                editor7.putString("counttehpucuk", "0");
+                editor7.apply();
+                finish();
+
+                sharedPreferences = getSharedPreferences("countultramilk", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor8 = sharedPreferences.edit();
+                editor8.putString("countultramilk", "0");
+                editor8.apply();
+                finish();
+
+                sharedPreferences = getSharedPreferences("countvit", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor9 = sharedPreferences.edit();
+                editor9.putString("countvit", "0");
+                editor9.apply();
+                finish();
+
                 Intent mainactivity = new Intent(ListOrder.this,MainActivity.class);
                 startActivity(mainactivity);
+
+                Toast.makeText(getApplicationContext(),myString,Toast.LENGTH_LONG).show();
             }
         });
 
