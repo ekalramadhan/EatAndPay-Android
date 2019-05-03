@@ -294,12 +294,6 @@ public class ListOrder extends AppCompatActivity {
                 uangMasuk = uangMasuk + iTotal;
                 datatransaksi.child("Uang_Masuk").setValue(uangMasuk);
                 dataservo.child("HIGH").setValue(1);
-                try {
-                    sleep(15000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                dataservo.child("HIGH").setValue(0);
 
                 sharedPreferences = getSharedPreferences("countbengbeng", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor1 = sharedPreferences.edit();

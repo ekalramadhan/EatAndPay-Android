@@ -12,15 +12,15 @@
         android:layout_height="wrap_content"
         android:id="@+id/toolbar"
         android:minHeight="?attr/actionBarSize"
-        android:background="@color/enak">
+        android:background="@color/update">
 
         <ImageButton
             android:id="@+id/sign_out"
             android:layout_margin="1dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/enak"
-            android:src="@mipmap/ic_eatandpay"
+            android:backgroundTint="@color/update"
+            android:src="@mipmap/ic_eatandpayfixx"
             android:layout_gravity="start"/>
 
         <TextView
@@ -145,12 +145,13 @@
         android:id="@+id/orderbutton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="25dp"
         android:layout_marginTop="50dp"
-        android:textColor="#ffffff"
-        android:onClick="orderDetails"
         android:background="@drawable/roundbutton"
+        android:backgroundTint="@color/update"
         android:fontFamily="@font/montserrat_regular"
-        android:textStyle="bold"
-        android:text="Orderan" />
+        android:onClick="orderDetails"
+        android:padding="25dp"
+        android:text="CART"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
 </LinearLayout>

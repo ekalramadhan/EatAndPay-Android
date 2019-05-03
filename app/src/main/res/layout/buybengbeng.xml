@@ -8,7 +8,7 @@
     android:gravity="center"
     android:id="@+id/orderbengbeng"
     android:orientation="vertical"
-    android:background="@color/enak"
+    android:background="@color/update"
     tools:context=".BuyBengBeng">
 
     <ImageView
@@ -37,7 +37,7 @@
         android:layout_gravity="center_horizontal"
         android:paddingTop="25dp"
         app:backGroundColor="@color/white"
-        app:textColor="@color/enak" />
+        app:textColor="@color/update" />
 
     <Button
         android:id="@+id/ok"

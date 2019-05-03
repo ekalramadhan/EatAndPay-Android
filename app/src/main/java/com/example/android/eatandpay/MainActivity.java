@@ -112,7 +112,6 @@ public class MainActivity extends AppCompatActivity  {
             @Override
             public void onClick(View v) {
                 orderDetails(v);
-                Toast.makeText(getApplicationContext(),myString,Toast.LENGTH_LONG).show();
                 //startActivity(new Intent(MainActivity.this, ListOrder.class));
             }
         });
