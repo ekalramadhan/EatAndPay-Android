@@ -33,7 +33,8 @@ public class ListOrder extends AppCompatActivity {
     public static DatabaseReference databengbeng,datagoodtime,datashorr,datanextar,datapilus,dataricheese,datatehpucuk,dataultramilk,datavit, datatransaksi, dataservo;
 
     private Button Submit;
-    String myString = "Terimakasih Sudah Membeli, Kejujuran Anda Sangat Kami Hargai";
+    String myStringPay = "Terimakasih Sudah Membeli, Kejujuran Anda Sangat Kami Hargai";
+    String myStringNotPay = "Anda Belum Memasukan Item";
 
     public static final String SHARED_PREFS = "sharedPrefs";
     public static final String TEXT = "text";
@@ -292,8 +293,15 @@ public class ListOrder extends AppCompatActivity {
                 value9 = "";
 
                 uangMasuk = uangMasuk + iTotal;
+                if (iTotal == 0){
+                dataservo.child("HIGH").setValue(0);
+                    Toast.makeText(getApplicationContext(),myStringNotPay,Toast.LENGTH_LONG).show();}
+                else if (iTotal > 0){
                 datatransaksi.child("Uang_Masuk").setValue(uangMasuk);
                 dataservo.child("HIGH").setValue(1);
+                    Toast.makeText(getApplicationContext(),myStringPay,Toast.LENGTH_LONG).show();}
+
+
 
                 sharedPreferences = getSharedPreferences("countbengbeng", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor1 = sharedPreferences.edit();
@@ -352,7 +360,7 @@ public class ListOrder extends AppCompatActivity {
                 Intent mainactivity = new Intent(ListOrder.this,MainActivity.class);
                 startActivity(mainactivity);
 
-                Toast.makeText(getApplicationContext(),myString,Toast.LENGTH_LONG).show();
+
             }
         });
 
